@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Tour Package Reservation</title>
+    <style>
+        form {
+            width: 40vw;
+            margin: auto;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: system-ui;
+        }
+        form h1 {
+            display: flex;
+            justify-content: center;
+        }
+        fieldset {
+            width: 40vw;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            /* margin-top: 4px; */
+        }
+        input,
+        select {
+            width: 20vw;
+            height: 20px;
+            border-radius: 8px;
+            padding-left: 5px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .rad{
+        display: inline;
+        height: 15px;
+        width: auto;
+        }
+        button{
+            height: 30px;
+            background-color: blue;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: 700;
+            margin-top: 15px;   
+        }
+    </style>
+</head>
+
+<body>
+    <form action="tourpackage.php" method="post">
+        <h1>Tour Package Reservation</h1>
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" name="Name" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="Email" id="email" required>
+
+            <label for="number">Phone Number:</label>
+            <input type="number" name="Phone" id="number" required>
+
+            <label for="address">Address:</label>
+            <input type="text" name="Address" id="address" required>
+        </fieldset>
+        <fieldset>
+            <legend>Tour Package Details</legend>
+            <label for="Package">Tour Package:</label>
+            <select name="Package" id="Package" required>
+                <option value="Beach Gateway">Beach Gateway</option>
+                <option value="Mountain Adventure">Mountain Adventure</option>
+                <option value="City Tour">City Tour</option>
+            </select>
+            <label for="date">Travel Date:</label>
+            <input type="date" name="Travel Date" id="date" required>
+
+            <label for="people">No of People:</label>
+            <input type="number" name="No of People" id="people" required>
+
+            <label for="days">No of Days:</label>
+            <input type="number" name="No of Days" id="days" required>
+        </fieldset>
+        <fieldset>
+            <legend>Payment Details: </legend>
+            <h3>Payment Method:</h3>
+                <input class="rad" type="radio" name="payment_method" value="Credit Card" id="credit">
+                <label class="rad" for="credit">Credit Card</label>
+
+                <input class="rad" type="radio" name="payment_method" value="Bank Transfer" id="Bank">
+                <label class="rad" for="Bank">Bank Transfer</label>
+              
+                <input class="rad" type="radio" name="payment_method" value="Khalti" id="Khalti" required>
+                <label class="rad" for="Khalti">Khalti</label>
+        </fieldset>
+        <button>Reserve</button>
+    </form>
+</body>
+</html>
