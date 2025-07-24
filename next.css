@@ -6,7 +6,13 @@
     padding: 80px 40px 40px;
     gap: 100px;
     align-items: flex-start;
+    width: full;
 
+}
+@media (max-width:768px){
+    .last{
+        margin: 10px;
+    }
 }
 
 .agadi {
@@ -38,12 +44,11 @@ body.dark-mode .paxadi p {
 }
 
 .paxadi {
-    width: 75%;
+ 
     display: grid;
     grid-template-columns: 130px 130px 130px 130px;
-    gap: 60px;
+    gap: 35px;
 }
-
 .paxadi ul {
     list-style: none;
     display: flex;
@@ -75,6 +80,47 @@ body.dark-mode .paxadi p {
     flex-direction: column;
     gap: 20px;
 }
+
+@media (max-width: 768px){
+    .paxadi {
+display: grid;
+    grid-template-columns: 130px 130px ;
+    grid-template-rows: 100px 100px;
+    row-gap: 15px;
+    column-gap: 35px;
+    }
+    .paxadi ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.paxadi .company {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.paxadi .solutions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.paxadi .support {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.paxadi .resources {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+}
+
 
 .paxadi p {
     font-size: 1.5rem;

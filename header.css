@@ -98,3 +98,8 @@ body.dark-mode .theme-toggle {
 body.dark-mode .theme-toggle:hover {
     background-color: rgb(231, 229, 229);
 }
+@media (max-width:768px){
+    .btn{
+        display: none;
+    }
+}
